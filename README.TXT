@@ -49,6 +49,8 @@ ontology_unpacking/
     - ontological unpacking examples
 
 evaluation/
+    Generate synthetic datasets used for scalability experiments:
+    - 8k, 40k, 80k, 200k, and 400k fact configurations
     Experimental evaluation materials:
     - competency questions
     - Logical Soundness definition
@@ -60,10 +62,6 @@ evaluation/outputs/
     - recommendation examples
     - evaluation results
     - scalability measurements
-
-datasets/synthetic_scalability/
-    Synthetic datasets used for scalability experiments:
-    8k, 40k, 80k, 200k, and 400k fact configurations
 
 src/
     Source code modules for semantic onboarding, reasoning, evaluation,
