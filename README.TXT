@@ -48,14 +48,14 @@ ontology_unpacking/
     - business rule descriptions
     - ontological unpacking examples
 
-experiments/evaluation/
+evaluation/
     Experimental evaluation materials:
     - competency questions
     - Logical Soundness definition
     - expert assessment protocol
     - baseline prompt configuration
 
-experiments/outputs/
+evaluation/outputs/
     Experimental outputs:
     - recommendation examples
     - evaluation results
@@ -64,9 +64,6 @@ experiments/outputs/
 datasets/synthetic_scalability/
     Synthetic datasets used for scalability experiments:
     8k, 40k, 80k, 200k, and 400k fact configurations
-
-baseline/
-    Reproducibility materials for the KG+LLM baseline comparison
 
 src/
     Source code modules for semantic onboarding, reasoning, evaluation,
