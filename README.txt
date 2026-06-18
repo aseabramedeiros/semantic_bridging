@@ -1,4 +1,4 @@
-# Semantic Bridging Artifact Repository
+# ISWC 2026 Artifact Repository
 
 This repository contains the artifacts used in the evaluation of the Semantic Bridging methodology. The repository is organized according to the three main stages of the proposed approach: Semantic Onboarding, Ontological Unpacking, and Recommendation Evaluation.
 
