@@ -99,7 +99,7 @@ explain_recommendation(UserID, ProdID, Explanation) :-
 % 4. DISCOUNT PRIORITIZATION
 % ----------------------------------------------------------
 
-% Pesos revisados: buys e also_buy dominam a decisão.
+% Revised weights: buys and also_buy dominate the decision.
 weight_discount(mention, 1).
 weight_discount(also_buy_category, 6).
 weight_discount(previous_purchase_category, 5).
@@ -129,14 +129,14 @@ count_user_also_buy_targets_in_category(UserID, CatID, Count) :-
 user_mentions_category(UserID, CatID) :-
     mentions(UserID, CatID).
 
-% Nova semântica:
-% A categoria só é candidata se houver evidência comportamental real.
+% Revised semantics:
+% A category is a candidate only when real behavioral evidence is available.
 candidate_discount_category(UserID, CatID, BoughtCount, AlsoBuyCount) :-
     count_user_purchases_in_category(UserID, CatID, BoughtCount),
     count_user_also_buy_targets_in_category(UserID, CatID, AlsoBuyCount),
     (BoughtCount > 0 ; AlsoBuyCount > 0).
 
-% Predicado único e consistente para a CQ2.
+% Single consistent predicate for CQ2.
 prioritized_discount_category(UserID, CatID, PriorityScore, MentionFlag, BoughtCount, AlsoBuyCount, Explanation) :-
     candidate_discount_category(UserID, CatID, BoughtCount, AlsoBuyCount),
     weight_discount(mention, MentionWeight),
